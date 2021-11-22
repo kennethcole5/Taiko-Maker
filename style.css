@@ -14,22 +14,27 @@ svg {
 }
 
 .kick-pad,
-.snare-pad,
-.hithat-pad{
+.snare-pad{
     width: 5rem;
     height: 5rem;
     margin: 1rem 0.5rem;
     cursor: pointer;
 
 }
+.hihat-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
 .kick-pad{
     background: rgb(160, 211, 224);
 }
 .snare-pad{
-    background: rgb(69, 204, 23);
+    background: rgb(228, 100, 15);
 }
 .hihat-pad{
-    background: rgb(235, 146, 14);
+    background: rgb(71, 230, 31);
 }
 
 .sequencer{
@@ -51,7 +56,7 @@ svg {
 }
 .kick,
 .snare,
-.hihat {
+.hihat{
     display: flex;
 }
 
