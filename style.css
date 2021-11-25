@@ -67,4 +67,8 @@ svg {
     margin: 0rem 2rem;
 
 }
+.controls button{
+    padding: 1rem;
+    border: none;
+}
 
