@@ -36,6 +36,15 @@ svg {
 .hihat-pad{
     background: rgb(71, 230, 31);
 }
+.kick-pad.active{
+    background: rgb(81, 199, 228);
+}
+.snare-pad.active{
+    background: rgb(226, 91, 0);
+}
+.hihat-pad.active{
+    background: rgb(49, 232, 3);
+}
 
 .sequencer{
     display: flex;
@@ -79,5 +88,16 @@ svg {
 .pad{
     transition: all 0.5s ease;
 }
+.play{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: rgb(88,88,88);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 3rem;
+
+}
+
 
 
