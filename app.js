@@ -1,22 +1,38 @@
 class DrumKit {
     constructor() {
-        this.pads = document.querySelectorAll("");
-        this.kickAduio = document.querySelector(".kick-sound");
-        this.snareAduio = document.querySelector(".snare-sound");
-        this.hihatAduio = document.querySelector(".hihat-sound");
+        this.pads = document.querySelectorAll(".pad");
+        this.playBtn = document.querySelector(".play");
+        this.kickAudio = document.querySelector(".kick-sound");
+        this.snareAudio = document.querySelector(".snare-sound");
+        this.hihatAudio = document.querySelector(".hihat-sound");
         this.index = 0;
+        this.bpm = 150;
+    }
+    activePad() {
+        this.classList.toggle("active");
     }
     repeat() {
         let step = this.index % 8;
-        console.log(step);
+        const activeBars = document.querySelectorAll(`.b${step}`);
+        console.log(activeBars);
+        this.index++;
     }
     start() {
+        const interval = (60 / this.bpm) * 1000; //Simple Calc explained at 11:00 in Creating sound loop section
         setInterval(() => {
             this.repeat();
-        }, 1000);
+        }, interval);
     }
 }
 
 const drumKit = new DrumKit();
 
-drumKit.start()
+drumKit.pads.forEach(pad => {
+    pad.addEventListener("click", drumKit.activePad);
+});
+
+
+drumKit.playBtn.addEventListener('click', function () {
+    drumKit.start();
+});
+
