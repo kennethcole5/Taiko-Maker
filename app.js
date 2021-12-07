@@ -14,10 +14,14 @@ class DrumKit {
     repeat() {
         let step = this.index % 8;
         const activeBars = document.querySelectorAll(`.b${step}`);
-        console.log(activeBars);
+        //Loop over the pads
+        activeBars.forEach(bar => {
+            bar.getElementsByClassName.animation = `playTrack 0.3s alternate ease-in-out`;
+        });
         this.index++;
     }
     start() {
+        console.log(this);
         const interval = (60 / this.bpm) * 1000; //Simple Calc explained at 11:00 in Creating sound loop section
         setInterval(() => {
             this.repeat();
