@@ -28,7 +28,7 @@ svg {
     cursor: pointer;
 }
 .kick-pad{
-    background: rgb(160, 211, 224);
+    background: rgb(70, 179, 206);
 }
 .snare-pad{
     background: rgb(228, 100, 15);
@@ -37,13 +37,13 @@ svg {
     background: rgb(71, 230, 31);
 }
 .kick-pad.active{
-    background: rgb(81, 199, 228);
+    background: rgb(142, 207, 223);
 }
 .snare-pad.active{
-    background: rgb(226, 91, 0);
+    background: rgb(204, 164, 137);
 }
 .hihat-pad.active{
-    background: rgb(49, 232, 3);
+    background: rgb(137, 228, 137);
 }
 
 .sequencer{
