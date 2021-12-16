@@ -7,6 +7,7 @@ class DrumKit {
         this.hihatAudio = document.querySelector(".hihat-sound");
         this.index = 0;
         this.bpm = 150;
+        this.isPlaying = null;
     }
     activePad() {
         this.classList.toggle("active");
@@ -39,9 +40,17 @@ class DrumKit {
     start() {
         console.log(this);
         const interval = (60 / this.bpm) * 1000; //Simple Calc explained at 11:00 in Creating sound loop section
-        setInterval(() => {
-            this.repeat();
-        }, interval);
+        //* Check if it's playing *//
+        if (!this.isPlaying) {
+            this.isPlaying = setInterval(() => {
+                this.repeat();
+            }, interval);
+        } else {
+            //* Clear Interval *//
+            clearInterval(this.isPlaying);
+
+        }
+
     }
 }
 
