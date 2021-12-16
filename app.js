@@ -30,7 +30,7 @@ class DrumKit {
                 }
                 if (bar.classList.contains("hihat-pad")) {
                     this.hihatAudio.currentTIme = 0;
-                    this.kickAudio.play();
+                    this.hihatAudio.play();
                 }
             }
         });
