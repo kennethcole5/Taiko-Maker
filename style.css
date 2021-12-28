@@ -121,6 +121,17 @@ select{
     position: relative;
     background-color: rgb(228, 100, 15);
 } */
+.tempo-slider{
+    cursor: pointer;
+}
+/* .tempo p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+} */
+.tempo p{
+    font-size: 1rem;
+}
 
 @keyframes playTrack{
     from{
